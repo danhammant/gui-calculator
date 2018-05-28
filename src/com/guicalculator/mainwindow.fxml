@@ -1,0 +1,153 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane fx:controller="com.guicalculator.Controller"
+            xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: black">
+    <padding>
+        <Insets top="10" right="10" left="10" bottom="10"/>
+    </padding>
+    <top>
+        <TextField fx:id="numberField" alignment="CENTER_RIGHT" style="-fx-background-color: DarkGray" text="0" editable="false">
+            <font>
+                <Font name="Digital-7" size="30"/>
+            </font>
+        </TextField>
+    </top>
+    <center>
+        <GridPane hgap="10" vgap="10">
+            <HBox GridPane.rowIndex="0" GridPane.columnIndex="0" spacing="10">
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            <Button fx:id="acButton" text="AC" style="-fx-background-color: CadetBlue" prefWidth="57" prefHeight="57"
+                    onMousePressed="#handleACButton">
+                <font>
+                    <Font name="Arial" size="20"/>
+                </font>
+            </Button>
+            <Button fx:id="positiveNegativeButton" text="+/-" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                    onMousePressed="#handlePositiveNegativeButton">
+                <font>
+                    <Font name="Arial" size="20"/>
+                </font>
+            </Button>
+            <Button fx:id="percentButton" text="\%" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                    onMousePressed="#handlePercentButton">
+                <font>
+                    <Font name="Arial" size="20"/>
+                </font>
+            </Button>
+            <Button fx:id="divideButton" text="÷" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                    onMousePressed="#handleOperatorButtonPress">
+                <font>
+                    <Font name="Arial" size="30"/>
+                </font>
+            </Button>
+            </HBox>
+            <HBox GridPane.rowIndex="1" GridPane.columnIndex="0" spacing="10">
+                <Button fx:id="sevenButton" text="7" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handleNumberButtonPress">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+                <Button fx:id="eightButton" text="8" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handleNumberButtonPress">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+                <Button fx:id="nineButton" text="9" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handleNumberButtonPress">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+                <Button fx:id="multiplyButton" text="x" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handleOperatorButtonPress">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+            </HBox>
+            <HBox GridPane.rowIndex="2" GridPane.columnIndex="0" spacing="10" prefWidth="57" prefHeight="57">
+                <Button fx:id="fourButton" text="4" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handleNumberButtonPress">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+                <Button fx:id="fiveButton" text="5" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handleNumberButtonPress">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+                <Button fx:id="sixButton" text="6" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handleNumberButtonPress">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+                <Button fx:id="subtractButton" text="-" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handleOperatorButtonPress">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+            </HBox>
+            <HBox GridPane.rowIndex="3" GridPane.columnIndex="0" spacing="10">
+                <Button fx:id="threeButton" text="3" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handleNumberButtonPress">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+                <Button fx:id="twoButton" text="2" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handleNumberButtonPress">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+                <Button fx:id="oneButton" text="1" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handleNumberButtonPress">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+                <Button fx:id="additionButton" text="+" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handleOperatorButtonPress">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+            </HBox>
+            <HBox GridPane.rowIndex="4" GridPane.columnIndex="0" spacing="10">
+                <Button fx:id="zeroButton" text="0" style="-fx-background-color: DarkGray" prefWidth="124"
+                        onMousePressed="#handleNumberButtonPress">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+                <Button fx:id="pointButton" text="." style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handlePointButton">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+                <Button fx:id="equalsButton" text="=" style="-fx-background-color: DarkGray" prefWidth="57" prefHeight="57"
+                        onMousePressed="#handleEqualsButton">
+                    <font>
+                        <Font name="Arial" size="30"/>
+                    </font>
+                </Button>
+            </HBox>
+
+        </GridPane>
+    </center>
+
+</BorderPane>
